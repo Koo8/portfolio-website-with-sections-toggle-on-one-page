@@ -1,0 +1,53 @@
+This is a portfolio page with one header and 4 secions of 100vh min-height.
+
+fontawesome: version used 5.15.4. so make sure choose this same version for any icon snippets
+
+short-cut:  $  ==> for <div class="control control-1 active-btn"></div>
+                    <div class="control control-2 active-btn"></div>
+                    <div class="control control-3 active-btn"></div>
+                    <div class="control control-4 active-btn"></div>
+                    <div class="control control-5 active-btn"></div>
+
+        type:     .control.control-$.active-btn*5     The $ sign will auto generate incremented numbers from 1
+
+by installing the extension of sass and its live compiler, I have created a style.scss file. Click "watch sass" button at the bottom bar of vscode, 
+        'style.css' and 'style.css.map' files are generated automatically and updated constantly while 'watching'.
+
+data-id etc. CSS data attibute - author-self-created attr, is used for the 'control' buttons. All buttons are fixed display.
+
+To center the content: display: flex; justify-content: center; align-items: center;
+
+To make circle: backgroud-color:red; width: 55px; height:55px; border-radius: 50%;
+
+Fat arrow function "this" refers to the 'window' object, so in TogglePages() in app.js, the 'secBtn[i].classList.add' 
+        is used instead of 'this.classList.add'
+
+for <i> , set its 'pointer-events:none;' because when the div button is clicked, <i> as event.target needs to be silent,
+        so that only the parent <div> is for sure the event.target, this parent <div> has data-id, to access this, event.target.dataset 
+        is used. 
+
+/** ANIMATION **/
+@keyframes: adding 'forwards' will lock the last frame on screen, so that no need to add the last transition like 'transform: translateY(0) scale(1);' in the section
+
+psudo element needs to provide content, for background, set absolute and 0 for each direction to cover whole screen, z-index to -1.
+
+For multiple layers of background, the order is from front to back. 
+
+Add animation to a website, the best way is to use css opacity + transform instead of javascript or embed videos or GIF, for performance persective
+
+By applying different animation speeds for multi animations, the combined result is dramatic.
+
+Timing functions in CSS: ease in, ease out, liner, ease in out, or use cubic-bezier().com for more customized timing control.
+
+For delay timing function such as .5s, in order to stop background from flashing before the delayed image, use 'opacity:0;'
+        to remove the background color.
+
+It is recommended to only use customized timing function for animation, not ease in or out built in stuff.
+
+Show staggered animation (animate one after another) by using different animation-delay on the same animation class.
+
+
+/* Transition:opacity, transform  for animation effect*/
+
+_media.scss is imported at the end of the style.scss. This is a MUST.
+

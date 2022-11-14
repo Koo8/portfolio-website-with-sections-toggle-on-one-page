@@ -1,0 +1,222 @@
+@media screen and (max-width: 600px){
+   .header-content {
+        grid-template-columns: 1fr;
+        .left-header {
+           .h-shape {
+            display:none;
+           }
+           .image {
+            width: 90%;
+            margin: 0 auto;
+           }
+        }
+        .right-header {
+            grid-row: 1;
+            padding: 15px;
+            width: 90%;
+            margin: 0 auto;
+            align-items: center;
+            .name {
+                font-size: 2.2rem;
+            }
+        }
+    }
+    .main-btn {
+        font-weight: 500;
+        .btn-text {
+            padding: 0 1.3rem;
+        }
+        .btn-icon {
+            padding: .7rem;
+        }
+    }
+    .controls {
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 1rem;
+        width: 100%;
+        background-color: var(--color-grey-5);
+        .control {
+            padding: .7rem;
+            width: 40px;
+            height: 40px;
+            i {
+                font-size: .9rem;
+            }
+        }
+
+
+    }
+    .theme-btn {
+        width: 40px;
+        height: 40px;
+        i {
+            font-size: .9rem;
+        }
+    }
+    .main-title {
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            .bg-text {
+                font-size: 3.3rem;
+                font-weight: 700;
+            }
+        }
+    }
+    .main-btn {
+        font-weight: 500;
+        align-self: auto;
+        .btn-text {
+            padding: 0 1.3rem;
+        }
+        .btn-icon {
+            padding:.5rem;
+        }
+    }    
+    section {
+        padding: 2rem 3%;
+    }
+    .about-container {
+        grid-template-columns: 1fr;
+        padding: 3rem 0;
+        .left-about {
+            padding:0 0 45px 0;
+            align-items: center;
+            h4 {
+                font-size: 1.2rem;
+            }
+        }
+        .right-about {
+            gap: 1.3rem;
+            .about-item {
+                .abt-text {
+                    padding: 1rem;
+                    .large-text {
+                        font-size: 2rem;
+                        font-weight: 500;
+                    }
+                    .small-text {
+                        font-size:.8rem;
+                        letter-spacing: 1px;
+                        padding-left: 2rem;
+                        &::before {
+                            width: 1.4rem;
+                            top:8px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    .about-stats {
+        padding-bottom: 3rem;
+    }
+    .stat-title {
+        font-size: 1.1rem;
+        padding: 2rem 0;
+    }
+    .time {
+        .timeline{
+            grid-template-columns: 1fr;
+            .timeline-item {
+                padding-left: 4%;
+                .for-icon {
+                    padding: 3px;
+                    .tl-icon {
+                        width: 37px;
+                        height: 37px;
+                    }
+                }
+                .timeline-content {
+                    h5 {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        span{
+                            font-size: .7rem;
+                        }
+                    }
+                    p {
+                        font-size: .7rem;
+                        letter-spacing: 1.5px;
+                    }
+
+                }
+                
+            }
+        }
+    }
+    .port-text {
+        padding: 1rem 0 0 0;
+    }
+    .portfolios {
+        padding: 2rem;
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+    .allblogs {
+        margin-top: 0;
+        padding: 3rem;
+        grid-template-columns: 1fr;
+        gap:3rem;
+        .blog-item {
+            .blog-text {
+                h4{
+                    font-size: 1.2rem;
+                }
+                p {
+                    line-height: 1.4rem;
+                }
+            }
+        }
+    }
+    .contact-content-container {
+        flex-direction: column;
+        .left-contact {
+            display:flex;
+            flex-direction: column;
+            flex:auto;
+            h4 {
+                font-size: 1.3rem;
+            }
+            p{
+                line-height: 1.4rem;
+            }
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap:.3rem;
+                margin-bottom: 1rem;
+            }
+            .contact-icons {
+                margin-top: 1rem;
+                justify-content: center;
+                a {
+                    width: 40px;
+                    height: 40px;
+                    i {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .right-contact {
+            margin: 15px 0 50px 0;
+            .extra {
+                flex-direction: column;
+                :last-child {
+                    margin-left: 0;
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+
+        
+}
+// other screen size breakpoints can be added later.

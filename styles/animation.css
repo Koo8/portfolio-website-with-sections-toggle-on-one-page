@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --color-primary: rgb(32, 31, 31);
+  --color-white: rgb(240, 242, 236);
+  --color-gray: rgb(88, 88, 86);
+  --color-light-gray: rgb(130, 127, 127);
+  --color-green: rgb(33, 132, 33);
+  --transition-ens: all .4s ease-in-out;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-primary);
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: var(--transition-ens);
+}
+
+a {
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  min-height: 100vh;
+  color: var(--color-white);
+  overflow: hidden;
+}
+header .header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  position: absolute;
+}
+header .header-content .left-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+header .header-content .left-header .h-shape {
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-green);
+  top: 0;
+  left: 0;
+  width: 65%;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 45% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 45% 0%, 100% 100%, 0% 100%);
+}
+header .header-content .left-header .image {
+  background-color: rgb(56, 54, 54);
+  height: 90%;
+  width: 65%;
+  margin-left: 10%;
+  border-radius: 14px;
+}
+header .header-content .left-header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(100%);
+  transition: var(--transition-ens);
+}
+header .header-content .left-header .image img:hover {
+  filter: none;
+}
+header .header-content .right-header {
+  padding-right: 15%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+header .header-content .right-header .name {
+  color: var(--color-green);
+}
+header .header-content .right-header p {
+  margin: 1.5rem 0;
+}
+
+section {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.section {
+  transform: translateY(-100%) scale(0);
+  display: none;
+}
+
+.controls {
+  position: fixed;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.controls .active-btn {
+  background-color: var(--color-green) !important;
+  transition: var(--transition-ens);
+}
+.controls .active-btn i {
+  color: var(--color-white) !important;
+}
+.controls .control {
+  background-color: var(--color-gray);
+  padding: 1rem;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  align-content: center;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow-1);
+}
+.controls .control i {
+  font-size: 1.2rem;
+  color: var(--color-light-gray);
+}
+
+.active {
+  display: block;
+  -webkit-animation: pageShow 1s ease-out forwards;
+          animation: pageShow 1s ease-out forwards;
+}
+@-webkit-keyframes pageShow {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes pageShow {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.main-btn {
+  border-radius: 30px;
+  border: solid 1px var(--color-green);
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.main-btn .btn-text {
+  padding: 0 2rem;
+}
+.main-btn .btn-icon {
+  border-radius: 50%;
+  background-color: var(--color-green);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  transform: translateX(100%);
+  transition: all 2s ease-out;
+  z-index: -1;
+}
+.main-btn:hover::before {
+  transform: translateX(0);
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-green);
+}/*# sourceMappingURL=animation.css.map */
